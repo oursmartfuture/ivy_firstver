@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:font="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#015FA5"
+        android:orientation="horizontal">
+
+        <include layout="@layout/header_common" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/enableBluetooth"
+        android:visibility="invisible"
+        android:layout_gravity="bottom"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="125dp"
+            android:layout_height="300dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30sp"
+            android:src="@drawable/bluetooth"
+            />
+    <com.Custom.CustomTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enable your Bluetooth first to see the Devices"
+        android:textSize="@dimen/medium"
+        android:gravity="center"
+        font:customFont="@string/helv45light"
+        android:layout_gravity="center"
+    />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <com.Custom.CustomButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/textfield"
+                android:text="@string/Enable"
+                android:textAllCaps="false"
+                font:customFont="@string/helvRoman"
+                android:textSize="18sp"
+                android:id="@+id/enable"
+                android:layout_gravity="center"
+                android:textColor="@color/button_text"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+            android:id="@+id/listScannedDevices"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:cacheColorHint="@color/SignInLogin"
+            android:divider="@color/light_grey"
+
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:id="@+id/llNoRecordsFound"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:cacheColorHint="@color/SignInLogin"
+            android:divider="@null"
+            android:visibility="gone"
+            android:gravity="center">
+
+            <include layout="@layout/no_rcord" />
+        </LinearLayout>
+    </android.support.v4.widget.SwipeRefreshLayout>
+   <!--     <LinearLayout
+            android:id="@+id/llNoRecordsFound"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tvNoRecords"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no_records_found"
+                android:textSize="@dimen/medium" />
+
+        </LinearLayout>-->
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

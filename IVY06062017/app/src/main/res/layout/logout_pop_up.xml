@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:font="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/alertParent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blackcolortransparent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+
+        android:layout_marginTop="20dp"
+        android:background="@color/SignInLogin"
+        android:orientation="vertical">
+
+        <com.Custom.CustomTextView
+            android:id="@+id/clickmarkettext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:text="Ivy App"
+            font:customFont="@string/helv45light"
+            android:textColor="@color/tab_text_view_prof"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <com.Custom.CustomTextView
+            android:id="@+id/alerttextlogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            font:customFont="@string/helv45light"
+            android:layout_marginTop="15dp"
+            android:text=""
+            android:textColor="@color/tab_text_view_prof"
+            android:textSize="@dimen/medium" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/SignInLogin"
+        android:gravity="end"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingTop="20dp">
+
+        <com.Custom.CustomTextView
+            android:id="@+id/canceltext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:padding="5dp"
+            font:customFont="@string/helvRoman"
+            android:text="CANCEL"
+            android:textColor="@color/postproductcolor"
+            android:textSize="@dimen/medium" />
+
+        <com.Custom.CustomTextView
+            android:id="@+id/oktext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            font:customFont="@string/helvRoman"
+            android:layout_marginRight="20dp"
+            android:padding="5dp"
+            android:text="OK"
+            android:textColor="@color/postproductcolor"
+            android:textSize="@dimen/medium"
+
+            />
+
+
+    </LinearLayout>
+</LinearLayout>

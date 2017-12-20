@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:font="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/alertParent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blackcolortransparent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:background="@color/SignInLogin"
+        android:orientation="vertical">
+
+        <TextView
+
+            android:id="@+id/account_created"
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:background="@drawable/top_border"
+            android:gravity="center"
+            android:text="RESET PASSWORD"
+            android:textColor="@color/black"
+            android:textSize="@dimen/title_popup" />
+
+        <ImageView
+            android:id="@+id/delete_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/popup_signup" />
+
+        <TextView
+            android:id="@+id/verify_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:text="Please Check your mail and follow \n the steps to reset pasword."
+            android:textColor="@color/black"
+            android:textSize="@dimen/edit_box_text" />
+
+        <LinearLayout
+            android:id="@+id/Ok_button"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="25dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/textfield"
+            android:orientation="vertical">
+
+            <com.Custom.CustomTextView
+                android:id="@+id/email1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="OK"
+                font:customFont="@string/helvRoman"
+                android:textColor="@color/button_text"
+                android:textSize="@dimen/button_box_test" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

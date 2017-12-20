@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:font="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <include
+        android:id="@+id/includelayout"
+        layout="@layout/header_common" />
+
+    <LinearLayout
+        android:id="@+id/searchlinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/includelayout" >
+
+        <include layout="@layout/search_bar" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/searchlinear"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@+id/listView_extra_features"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/SignInLogin"
+            android:cacheColorHint="@color/SignInLogin"
+            android:divider="@color/divider_color"
+            android:dividerHeight="1dp"
+            android:scrollbars="none" >
+        </ListView>
+        <include layout="@layout/no_rcord" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buttonupdatelinear"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <com.Custom.CustomButton
+            android:id="@+id/button_Add_Features"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="#4DC2E5"
+            android:text="Add Features"
+            font:customFont="@string/helvRoman"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,14 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="button_box_test">12dp</dimen>
+    <dimen name="logo_text">13dp</dimen>
+    <dimen name="header_text_size">13dp</dimen>
+    <dimen name="title_popup">15dp</dimen>
+    <dimen name="edit_box_text">14dp</dimen>
+    <dimen name="sign_in_button_text">14dp</dimen>
+    <dimen name="medium">16dp</dimen>
+    <dimen name="small">14dp</dimen>
+    <dimen name="DIP">60dp</dimen>
+</resources>

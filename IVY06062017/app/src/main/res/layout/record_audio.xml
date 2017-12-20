@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:font="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:background="@color/SignInLogin"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <include layout="@layout/header_common"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/time_set"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/circularProgressBar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="0dp"
+        android:text="00:00"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="50dp" />
+
+    <ProgressBar
+        android:id="@+id/circularProgressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_centerInParent="true"
+        android:indeterminate="false"
+        android:max="100"
+        android:progressDrawable="@drawable/progressbar"
+        android:secondaryProgress="100" />
+
+    <ImageView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        android:src="@drawable/pause_centre" />
+
+
+    <LinearLayout
+        android:id="@+id/play_pause_stop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/circularProgressBar"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+      <!--  <ImageView
+            android:id="@+id/pause_icon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/pause" />-->
+
+        <ImageView
+            android:id="@+id/play_icon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:visibility="invisible"
+            android:src="@drawable/play" />
+
+        <ImageView
+            android:id="@+id/stop_icon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:visibility="invisible"
+            android:src="@drawable/stop" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <com.Custom.CustomButton
+            android:id="@+id/discard_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            font:customFont="@string/helvRoman"
+            android:background="@drawable/discard"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="3dp" />
+
+        <com.Custom.CustomButton
+            android:id="@+id/save_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_weight=".5"
+            font:customFont="@string/helv45light"
+            android:background="@drawable/save"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:paddingTop="3dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

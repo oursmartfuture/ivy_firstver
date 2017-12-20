@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:font="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <include layout="@layout/header_common" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rlGeneralSettings"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingLeft="5dp">
+
+                <ImageView
+                    android:id="@+id/icon"
+                    android:layout_width="35dp"
+                    android:layout_height="55dp"
+                    android:layout_alignParentLeft="true"
+                    android:padding="5dp"
+                    android:src="@drawable/general_setting" />
+
+                <com.Custom.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/arrow"
+                    android:layout_toRightOf="@+id/icon"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/general_settings"
+                    font:customFont="@string/helvthin35"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/arrow"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_alignParentRight="true"
+                    android:padding="15dp"
+                    android:src="@drawable/icon5" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/chat_background" />
+
+            <RelativeLayout
+                android:id="@+id/rlAudio"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingLeft="5dp">
+
+                <ImageView
+                    android:id="@+id/iconAudio"
+                    android:layout_width="35dp"
+                    android:layout_height="55dp"
+                    android:layout_alignParentLeft="true"
+                    android:padding="5dp"
+                    android:src="@drawable/audio_setting" />
+
+                <com.Custom.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/arrowAudio"
+                    android:layout_toRightOf="@+id/iconAudio"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/audioSettings"
+                    font:customFont="@string/helvthin35"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/arrowAudio"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_alignParentRight="true"
+                    android:padding="15dp"
+                    android:src="@drawable/icon5" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/chat_background" />
+
+            <RelativeLayout
+                android:id="@+id/rlNotifications"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingLeft="5dp">
+
+                <ImageView
+                    android:id="@+id/icon1"
+                    android:layout_width="35dp"
+                    android:layout_height="55dp"
+                    android:layout_alignParentLeft="true"
+                    android:padding="5dp"
+                    android:src="@drawable/notification" />
+
+                <com.Custom.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/notify"
+                    android:layout_toRightOf="@+id/icon1"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    font:customFont="@string/helvthin35"
+                    android:text="@string/notifications"
+                    android:textSize="18sp" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/notify"
+                    android:layout_alignParentRight="true">
+
+                    <TextView
+                        android:id="@+id/circleview"
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:background="@drawable/circle_view"
+                        android:gravity="center"
+                        android:visibility="gone"
+                        android:layout_gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="10"
+                        android:textColor="@color/SignInLogin"
+                        android:textSize="10dp" />
+                    <ImageView
+                        android:id="@+id/arrow1"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_alignParentRight="true"
+                        android:padding="15dp"
+                        android:src="@drawable/icon5" />
+                </LinearLayout>
+
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/chat_background" />
+
+            <RelativeLayout
+                android:id="@+id/rlAlert"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingLeft="5dp">
+
+                <ImageView
+                    android:id="@+id/icon9"
+                    android:layout_width="35dp"
+                    android:layout_height="55dp"
+                    android:layout_alignParentLeft="true"
+                    android:padding="5dp"
+                    android:src="@drawable/alert" />
+
+                <com.Custom.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/alert"
+                    android:layout_toRightOf="@+id/icon9"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    font:customFont="@string/helvthin35"
+                    android:text="@string/my_alerts"
+                    android:textSize="18sp" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/alert"
+                    android:layout_alignParentRight="true">
+
+                    <TextView
+                        android:id="@+id/circle"
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:background="@drawable/circle_view"
+                        android:gravity="center"
+                        android:visibility="gone"
+                        android:layout_gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="10"
+                        android:textColor="@color/SignInLogin"
+                        android:textSize="10dp" />
+                    <ImageView
+                        android:id="@+id/arrow9"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_alignParentRight="true"
+                        android:padding="15dp"
+                        android:src="@drawable/icon5" />
+                </LinearLayout>
+
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/chat_background" />
+
+            <RelativeLayout
+                android:id="@+id/rlMyProfile"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingLeft="5dp">
+
+                <ImageView
+                    android:id="@+id/icon2"
+                    android:layout_width="35dp"
+                    android:layout_height="55dp"
+                    android:layout_alignParentLeft="true"
+                    android:padding="5dp"
+                    android:src="@drawable/my_profile" />
+
+                <com.Custom.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/arrow2"
+                    android:layout_toRightOf="@+id/icon2"
+                    android:gravity="center_vertical"
+                    android:text="@string/my_profile"
+                    font:customFont="@string/helvthin35"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/arrow2"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_alignParentRight="true"
+                    android:padding="15dp"
+                    android:src="@drawable/icon5" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/chat_background" />
+
+            <RelativeLayout
+                android:id="@+id/rlManageContacts"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingLeft="5dp">
+
+                <ImageView
+                    android:id="@+id/icon3"
+                    android:layout_width="35dp"
+                    android:layout_height="55dp"
+                    android:layout_alignParentLeft="true"
+                    android:padding="5dp"
+                    android:src="@drawable/manage_contact" />
+
+                <com.Custom.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/arrow3"
+                    android:layout_toRightOf="@+id/icon3"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/manage_contacts"
+                    font:customFont="@string/helvthin35"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/arrow3"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_alignParentRight="true"
+                    android:padding="15dp"
+                    android:src="@drawable/icon5" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/chat_background" />
+
+            <RelativeLayout
+                android:id="@+id/rlAboutUs"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingLeft="5dp">
+
+                <ImageView
+                    android:id="@+id/icon4"
+                    android:layout_width="35dp"
+                    android:layout_height="55dp"
+                    android:layout_alignParentLeft="true"
+                    android:padding="5dp"
+                    android:src="@drawable/about_us" />
+
+                <com.Custom.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/arrow4"
+                    android:layout_toRightOf="@+id/icon4"
+                    android:gravity="center_vertical"
+                    android:text="@string/about_us"
+                    font:customFont="@string/helvthin35"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/arrow4"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_alignParentRight="true"
+                    android:padding="15dp"
+                    android:src="@drawable/icon5" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/chat_background" />
+
+            <RelativeLayout
+                android:id="@+id/rlContactUs"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingLeft="5dp">
+
+                <ImageView
+                    android:id="@+id/icon5"
+                    android:layout_width="35dp"
+                    android:layout_height="55dp"
+                    android:layout_alignParentLeft="true"
+                    android:padding="5dp"
+                    android:src="@drawable/contact_us" />
+
+                <com.Custom.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/arrow5"
+                    android:layout_toRightOf="@+id/icon5"
+                    android:gravity="center_vertical"
+                    android:text="@string/contact_us"
+                    font:customFont="@string/helvthin35"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/arrow5"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_alignParentRight="true"
+                    android:padding="15dp"
+                    android:src="@drawable/icon5" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/chat_background" />
+
+            <RelativeLayout
+                android:id="@+id/rlTermsAndCondition"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingLeft="5dp">
+
+                <ImageView
+                    android:id="@+id/icon6"
+                    android:layout_width="35dp"
+                    android:layout_height="55dp"
+                    android:layout_alignParentLeft="true"
+                    android:padding="5dp"
+                    android:src="@drawable/terms_and_condition" />
+
+                <com.Custom.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/arrow6"
+                    android:layout_toRightOf="@+id/icon6"
+                    android:gravity="center_vertical"
+                    android:text="@string/terms_and_conditions"
+                    font:customFont="@string/helvthin35"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/arrow6"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_alignParentRight="true"
+                    android:padding="15dp"
+                    android:src="@drawable/icon5" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/chat_background" />
+
+            <RelativeLayout
+                android:id="@+id/rlPrivacyPolicy"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingLeft="5dp">
+
+                <ImageView
+                    android:id="@+id/icon8"
+                    android:layout_width="35dp"
+                    android:layout_height="55dp"
+                    android:layout_alignParentLeft="true"
+                    android:padding="5dp"
+                    android:src="@drawable/privacy_policy" />
+
+                <com.Custom.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/arrow8"
+                    android:layout_toRightOf="@+id/icon8"
+                    android:gravity="center_vertical"
+                    font:customFont="@string/helvthin35"
+                    android:text="@string/privacy_policy"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/arrow8"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_alignParentRight="true"
+                    android:padding="15dp"
+                    android:src="@drawable/icon5" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/chat_background" />
+
+            <RelativeLayout
+                android:id="@+id/rlLogout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingLeft="5dp">
+
+                <ImageView
+                    android:id="@+id/icon7"
+                    android:layout_width="35dp"
+                    android:layout_height="55dp"
+                    android:layout_alignParentLeft="true"
+                    android:padding="5dp"
+                    android:src="@drawable/logout" />
+
+                <com.Custom.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/arrow7"
+                    android:layout_toRightOf="@+id/icon7"
+                    android:gravity="center_vertical"
+                    android:text="@string/logout"
+                    font:customFont="@string/helvthin35"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/arrow7"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_alignParentRight="true"
+                    android:padding="15dp"
+                    android:src="@drawable/icon5" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/chat_background" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

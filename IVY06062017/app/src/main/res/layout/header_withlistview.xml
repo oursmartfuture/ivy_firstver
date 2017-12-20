@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/SignInLogin"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/includelayout"
+        layout="@layout/header_common" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#F5F5F5"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_margin="10dp"
+            android:text="Notification List"
+
+            android:textColor="#000000"
+            android:textSize="18dp" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefreshNoRecord"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/no_record"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="No records found."
+                    android:textSize="@dimen/medium"
+                    android:visibility="visible" />
+                <!--<LinearLayout-->
+                <!--android:id="@+id/norecord_linear"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:background="@android:color/transparent"-->
+                <!--android:cacheColorHint="@color/SignInLogin"-->
+                <!--android:clickable="true"-->
+                <!--android:divider="@null"-->
+                <!--android:gravity="center"-->
+                <!--android:visibility="gone">-->
+
+                <!--<include layout="@layout/no_rcord" />-->
+
+                <!--</LinearLayout>-->
+            </ScrollView>
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:id="@+id/total_follow_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:cacheColorHint="@color/SignInLogin"
+                android:divider="@null"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:id="@+id/norecord_linear"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:cacheColorHint="@color/SignInLogin"
+                android:divider="@null"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <include layout="@layout/no_rcord" />
+            </LinearLayout>
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/menu_addlayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="@color/landscreen"
+        android:paddingBottom="0dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider_color" />
+
+        <ImageView
+            android:id="@+id/settings"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            android:padding="10dp"
+
+            android:src="@drawable/setting_icon" />
+
+        <ImageView
+            android:id="@+id/add_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="0dp"
+            android:padding="10dp"
+            android:src="@drawable/add_icon" />
+    </RelativeLayout>
+
+
+</LinearLayout>

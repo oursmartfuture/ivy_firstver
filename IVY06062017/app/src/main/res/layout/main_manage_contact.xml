@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:font="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/header_common" />
+
+        <com.Custom.CustomTextView
+            android:id="@+id/addcontactstxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/light_grey"
+            android:gravity="center_horizontal|center_vertical"
+            android:paddingBottom="5dp"
+            android:paddingTop="8dp"
+            android:text="@string/add_contacts"
+            font:customFont="@string/helv45light" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <com.Custom.CustomButton
+                android:id="@+id/appUserbtn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".5"
+                android:background="@drawable/appuserbackgr"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="3dp"
+                font:customFont="@string/helvRoman" />
+
+            <com.Custom.CustomButton
+                android:id="@+id/appPhonebook"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight=".5"
+                android:background="@drawable/phonebookbacground"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:paddingTop="3dp"
+                font:customFont="@string/helvRoman" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:background="@color/light_grey">
+
+            <com.Custom.CustomTextView
+                android:id="@+id/addcontactstxt1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_margin="5dp"
+
+                android:gravity="center_vertical"
+                android:text="@string/contactlist"
+                android:textSize="@dimen/small"
+                font:customFont="@string/helv45light" />
+        </LinearLayout>
+        <!--    <TextView
+                android:id="@+id/noitem"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/write_review_btn"
+                android:layout_below="@+id/includelayout"
+                android:gravity="center"
+                android:text="No record found."
+                android:textSize="@dimen/small"
+                android:visibility="gone" />-->
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/swipeRefreshNoRecord"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/no_record"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="No records found."
+                        android:textSize="@dimen/medium"
+                        android:visibility="visible" />
+                    <!--<LinearLayout-->
+                    <!--android:id="@+id/norecord_linear"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:background="@android:color/transparent"-->
+                    <!--android:cacheColorHint="@color/SignInLogin"-->
+                    <!--android:clickable="true"-->
+                    <!--android:divider="@null"-->
+                    <!--android:gravity="center"-->
+                    <!--android:visibility="gone">-->
+
+                    <!--<include layout="@layout/no_rcord" />-->
+
+                    <!--</LinearLayout>-->
+                </ScrollView>
+            </android.support.v4.widget.SwipeRefreshLayout>
+
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/swipeRefresh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible">
+
+                <ListView
+                    android:id="@+id/total_follow_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:cacheColorHint="@color/SignInLogin"
+                    android:divider="@null"
+                    android:visibility="visible" />
+
+
+                <LinearLayout
+                    android:id="@+id/norecord_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:cacheColorHint="@color/SignInLogin"
+                    android:divider="@null"
+                    android:gravity="center"
+                    android:visibility="gone">
+
+                    <include layout="@layout/no_rcord" />
+                </LinearLayout>
+            </android.support.v4.widget.SwipeRefreshLayout>
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

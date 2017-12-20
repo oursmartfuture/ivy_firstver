@@ -1,0 +1,267 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:font="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/Login_Screen_text">
+
+
+    <LinearLayout
+        android:id="@+id/header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <include layout="@layout/header_common"/>
+    </LinearLayout>
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+        <LinearLayout
+            android:id="@+id/parent_layout_login"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    >
+                    <FrameLayout
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/image_capture"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        >
+
+                        <RelativeLayout
+                            android:layout_width="143dp"
+                            android:gravity="center"
+                            android:background="@drawable/rounded_pink"
+                            android:layout_gravity="center"
+                            android:layout_height="143dp">
+                            <com.ivy.RoundedImageView
+                                android:id="@+id/prof_pic"
+                                android:layout_width="140dp"
+                                android:layout_height="140dp"
+                                android:scaleType="centerCrop"
+                                android:layout_centerInParent="true"
+                                android:background="@drawable/profile_pic"
+                                android:gravity="center"/>
+
+                        </RelativeLayout>
+                        <ImageView
+                            android:id="@+id/edit_image"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/edit_pencil"
+                            android:layout_gravity="bottom|right"
+                            android:visibility="gone"
+                            />
+
+                    </FrameLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical">
+                    <com.Custom.CustomTextView
+                        android:id="@+id/name_text"
+                        android:text="Name"
+                        android:textSize="16sp"
+                        font:customFont="@string/helvthin35"
+                        android:textColor="@color/hint_color"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <com.Custom.CustomEditText
+                        android:id="@+id/name"
+                        android:layout_marginTop="10dp"
+                        android:background="@null"
+                        android:textSize="18sp"
+                        android:text=""
+                        font:customFont="@string/helvRoman"
+                        android:textColor="@color/black"
+                        android:enabled="false"
+                        android:maxLines="1"
+                        android:inputType="textCapSentences"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="10dp"
+                    android:background="@color/divider_color"></View>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical">
+                    <com.Custom.CustomTextView
+                        android:id="@+id/email_text"
+                        android:text="Email"
+                        android:textSize="16sp"
+                        android:textColor="@color/hint_color"
+                        android:layout_gravity="center_vertical"
+                        font:customFont="@string/helvthin35"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <com.Custom.CustomEditText
+                        android:id="@+id/email"
+                        android:layout_marginTop="10dp"
+                        android:background="@null"
+                        android:textSize="18sp"
+                        android:text=""
+                        android:editable="false"
+                        android:enabled="false"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        font:customFont="@string/helvRoman"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+
+
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="10dp"
+                    android:background="@color/divider_color"></TextView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical">
+                    <com.Custom.CustomTextView
+                        android:id="@+id/address_text"
+                        android:text="Address"
+                        android:textSize="16sp"
+                        android:textColor="@color/hint_color"
+                        font:customFont="@string/helvthin35"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <com.Custom.CustomEditText
+                        android:id="@+id/address"
+                        android:layout_marginTop="10dp"
+                        android:background="@null"
+                        android:textSize="18sp"
+                        font:customFont="@string/helvRoman"
+                        android:maxLines="1"
+                        android:text=""
+                        android:enabled="false"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <!--<view-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="1dp"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:background="@color/chat_background"-->
+                    <!--/>-->
+
+
+
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="10dp"
+                    android:background="@color/divider_color"></TextView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical">
+                    <com.Custom.CustomTextView
+                        android:id="@+id/phone_text"
+                        android:text="Phone Number"
+                        android:textSize="16sp"
+                        font:customFont="@string/helvthin35"
+                        android:textColor="@color/hint_color"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <com.Custom.CustomEditText
+                        android:id="@+id/phone"
+                        android:layout_marginTop="10dp"
+                        android:background="@null"
+                        android:textSize="18sp"
+                        android:text=""
+                        font:customFont="@string/helvRoman"
+                        android:enabled="false"
+                        android:inputType="phone"
+                        android:textColor="@color/black"
+                        android:maxLines="1"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <!--<view-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="1dp"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:background="@color/chat_background"-->
+                    <!--/>-->
+
+
+
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="10dp"
+                    android:background="@color/divider_color"></TextView>
+
+                <LinearLayout
+                    android:layout_margin="10dp"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content">
+                    <com.Custom.CustomTextView
+                        android:layout_marginTop="15dp"
+                        android:id="@+id/change_pswd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        font:customFont="@string/helv45light"
+                        android:textColor="@color/pink_changepassword"
+                        android:text="Change Password"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
