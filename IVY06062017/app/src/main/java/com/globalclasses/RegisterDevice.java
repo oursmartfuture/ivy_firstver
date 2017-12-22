@@ -3,8 +3,10 @@ package com.globalclasses;
 import android.app.Activity;
 import android.os.AsyncTask;
 
-import com.google.android.gms.gcm.GoogleCloudMessaging;
-import com.google.android.gms.iid.InstanceID;
+//import com.google.android.gms.gcm.GoogleCloudMessaging;
+import com.google.firebase.messaging.FirebaseMessaging;
+//import com.google.android.gms.iid.InstanceID;
+import com.google.firebase.iid.FirebaseInstanceId;
 import com.push_notifications.CommonUtilities;
 
 import java.io.IOException;
@@ -20,7 +22,7 @@ public class RegisterDevice extends AsyncTask<Void, Void, Void> {
         mActivity=activity;
     }
     /**
-     * Registers the application with GCM servers asynchronously.
+     * Registers the application with FCM (earlier GCM) servers asynchronously.
      * <p>
      * Stores the registration id, app versionCode, and expiration time in the
      * application's shared preferences.
@@ -29,16 +31,21 @@ public class RegisterDevice extends AsyncTask<Void, Void, Void> {
     @Override
     protected Void doInBackground(Void... params) {
         // TODO Auto-generated method stub
-        InstanceID instanceID = InstanceID.getInstance(mActivity);
+        FirebaseInstanceId instanceID = FirebaseInstanceId.getInstance();
         String token = "";
         try {
+
             token = instanceID.getToken(CommonUtilities.SENDER_ID,
-                    GoogleCloudMessaging.INSTANCE_ID_SCOPE, null);
+                    FirebaseMessaging.INSTANCE_ID_SCOPE);
             GlobalMethod.savePreferences(mActivity, Constant.RegisterationId, token);
-            GlobalMethod.write("====GCMRegistrationToken:"+token);
+            GlobalMethod.write("====FCMRegistrationToken:"+token);
         } catch (IOException e) {
             e.printStackTrace();
         }
         return null;
     }
 }
+//        InstanceID instanceID = InstanceID.getInstance(mActivity);
+//            token = instanceID.getToken(CommonUtilities.SENDER_ID,
+//                    GoogleCloudMessaging.INSTANCE_ID_SCOPE, null);
+//            GlobalMethod.write("====GCMRegistrationToken:"+token);

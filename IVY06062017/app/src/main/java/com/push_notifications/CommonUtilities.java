@@ -15,7 +15,8 @@ public final class CommonUtilities {
     /**
      * Tag used on log messages.
      */
-    static final String TAG = "Ivy GCM";
+//    static final String TAG = "Ivy GCM";
+    static final String TAG = "Ivy FCM";
  
     static final String DISPLAY_MESSAGE_ACTION =
             "com.ivy.DISPLAY_MESSAGE";

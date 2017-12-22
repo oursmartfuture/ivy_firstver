@@ -23,14 +23,14 @@
     <uses-permission android:name="android.permission.SEND_SMS" />
 
     <!-- Keeps the processor from sleeping when a message is received. -->
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!--<uses-permission android:name="android.permission.WAKE_LOCK" /> Removed after firebase changes-->
 
     <!-- Creates a custom permission so only this app can receive its messages. -->
-    <permission
-        android:name="com.ivy.permission.C2D_MESSAGE"
-        android:protectionLevel="signature" />
+    <!--<permission-->
+        <!--android:name="com.ivy.permission.C2D_MESSAGE"-->
+        <!--android:protectionLevel="signature" />Removed after firebase changes-->
 
-    <uses-permission android:name="com.find_me.permission.C2D_MESSAGE" />
+    <!--<uses-permission android:name="com.find_me.permission.C2D_MESSAGE" />Removed after firebase changes-->
 
     <!-- Permission to vibrate -->
     <uses-permission android:name="android.permission.VIBRATE" />
@@ -237,17 +237,17 @@
         </service>
 
         <!-- GCM -->
-        <receiver
-            android:name="com.google.android.gms.gcm.GcmReceiver"
-            android:exported="true"
-            android:permission="com.google.android.c2dm.permission.SEND">
-            <intent-filter>
-                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+        <!--<receiverRemoved after firebase changes-->
+            <!--android:name="com.google.android.gms.gcm.GcmReceiver"-->
+            <!--android:exported="true"-->
+            <!--android:permission="com.google.android.c2dm.permission.SEND">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="com.google.android.c2dm.intent.RECEIVE" />-->
+                <!--<action android:name="com.google.android.c2dm.intent.REGISTRATION" />-->
 
-                <category android:name="com.ivy" />
-            </intent-filter>
-        </receiver>
+                <!--<category android:name="com.ivy" />-->
+            <!--</intent-filter>-->
+        <!--</receiver>-->
         <receiver
             android:name="com.ble_connect.BluetoothBroadcastReceiver"
             android:enabled="true">
@@ -256,13 +256,29 @@
             </intent-filter>
         </receiver>
 
+        <!--<service Removed after FCM change-->
+            <!--android:name=".MyGcmListenerService"-->
+            <!--android:exported="false">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="com.google.android.c2dm.intent.RECEIVE" />-->
+            <!--</intent-filter>-->
+        <!--</service>-->
+
         <service
-            android:name=".MyGcmListenerService"
-            android:exported="false">
-            <intent-filter>
-                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            android:name=".MyFcmListenerService">
+            <intent-filter >
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
+
+        <service
+            android:name=".MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+
+
 
         <meta-data
             android:name="io.fabric.ApiKey"
