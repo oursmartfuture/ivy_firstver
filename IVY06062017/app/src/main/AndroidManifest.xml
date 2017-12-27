@@ -279,7 +279,6 @@
         </service>
 
 
-
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="9888dc763f3318e277c3e0b6ea1d53d6616a0b12" />
