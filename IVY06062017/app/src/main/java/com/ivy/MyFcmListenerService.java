@@ -20,6 +20,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import java.util.Map;
+import android.content.Intent;
 
 import com.globalclasses.Constant;
 import com.globalclasses.GlobalMethod;
@@ -68,6 +69,19 @@ public class MyFcmListenerService extends FirebaseMessagingService {
         if (preference_settings.getString(Constant.view_notification, "").equalsIgnoreCase("Yes"))
             GlobalMethod.sendNotificationNew(bundle,this);
     }
+
+    /**
+     * Called when message is received.
+     *
+     * @param intent intent from FCM
+
+     */
+    @Override
+    public void handleIntent(Intent intent){
+        super.handleIntent(intent);
+    }
+
+
 //    public void onMessageReceived(String from, Bundle data) {
 //        super.onMessageReceived(from, data);
 //
