@@ -14,16 +14,16 @@
 
         <include layout="@layout/header_common" />
 
-        <com.Custom.CustomTextView
-            android:id="@+id/addcontactstxt"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/light_grey"
-            android:gravity="center_horizontal|center_vertical"
-            android:paddingBottom="5dp"
-            android:paddingTop="8dp"
-            android:text="@string/add_contacts"
-            font:customFont="@string/helv45light" />
+        <!--<com.Custom.CustomTextView-->
+            <!--android:id="@+id/addcontactstxt"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@color/light_grey"-->
+            <!--android:gravity="center_horizontal|center_vertical"-->
+            <!--android:paddingBottom="5dp"-->
+            <!--android:paddingTop="8dp"-->
+            <!--android:text="@string/add_contacts"-->
+            <!--font:customFont="@string/helv45light" />-->
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -32,20 +32,20 @@
             android:orientation="horizontal"
             android:weightSum="1">
 
-            <com.Custom.CustomButton
-                android:id="@+id/appUserbtn"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight=".5"
-                android:background="@drawable/appuserbackgr"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:paddingTop="3dp"
-                font:customFont="@string/helvRoman" />
+            <!--<com.Custom.CustomButton-->
+                <!--android:id="@+id/appUserbtn"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight=".5"-->
+                <!--android:background="@drawable/appuserbackgr"-->
+                <!--android:paddingLeft="5dp"-->
+                <!--android:paddingRight="5dp"-->
+                <!--android:paddingTop="3dp"-->
+                <!--font:customFont="@string/helvRoman" />-->
 
             <com.Custom.CustomButton
                 android:id="@+id/appPhonebook"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="10dp"
                 android:layout_weight=".5"
@@ -63,17 +63,17 @@
             android:layout_marginBottom="5dp"
             android:background="@color/light_grey">
 
-            <com.Custom.CustomTextView
-                android:id="@+id/addcontactstxt1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+            <!--<com.Custom.CustomTextView-->
+                <!--android:id="@+id/addcontactstxt1"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
 
-                android:layout_margin="5dp"
+                <!--android:layout_margin="5dp"-->
 
-                android:gravity="center_vertical"
-                android:text="@string/contactlist"
-                android:textSize="@dimen/small"
-                font:customFont="@string/helv45light" />
+                <!--android:gravity="center_vertical"-->
+                <!--android:text="@string/contactlist"-->
+                <!--android:textSize="@dimen/small"-->
+                <!--font:customFont="@string/helv45light" />-->
         </LinearLayout>
         <!--    <TextView
                 android:id="@+id/noitem"

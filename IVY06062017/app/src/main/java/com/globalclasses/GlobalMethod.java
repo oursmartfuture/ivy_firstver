@@ -58,6 +58,8 @@ import java.util.Locale;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import android.app.NotificationChannel;
+
 /**
  * * Name Of class : GlobalMethod.class
  * Class description : The classes  and methods under this class is for declaring the global methods for use in several classes.
@@ -650,6 +652,19 @@ public class GlobalMethod extends Activity {
 
         NotificationManager mnotificationManager = (NotificationManager) mActivity.getSystemService(Context.NOTIFICATION_SERVICE);
 
+
+        if (Build.VERSION.SDK_INT > Build.VERSION_CODES.M
+                && !mnotificationManager.isNotificationPolicyAccessGranted()) {
+
+            Intent intent = new Intent(
+                    android.provider.Settings
+                            .ACTION_NOTIFICATION_POLICY_ACCESS_SETTINGS);
+
+            mActivity.startActivity(intent);
+//            Toast.makeText(mActivity,"Please Enable Do no Disturb access", Toast.LENGTH_SHORT ).show();
+            return;
+        }
+
         GlobalMethod.write("totaldata" + data);
 //        if (getIntent.getExtras() != null) {
 //
@@ -705,6 +720,8 @@ public class GlobalMethod extends Activity {
                         .bigText(messageDisplay))
                 .setLights(238 - 221 - 130, 1, 1)
                 .setContentText(messageDisplay).setAutoCancel(true);
+
+
         if (preference_settings.getString(Constant.alert_type_ring, "").equalsIgnoreCase("Yes")) {
             mBuilder.setSound(RingtoneManager.getDefaultUri(RingtoneManager.TYPE_ALARM));
             // Vibrate if vibrate is enabled
@@ -729,8 +746,17 @@ public class GlobalMethod extends Activity {
 
 //        enableSound(mActivity);
 
+        //For Oreo change
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
 
+      /* Create or update. */
+            NotificationChannel channel = new NotificationChannel("my_channel_01",
+                    "Channel human readable title",
+                    NotificationManager.IMPORTANCE_DEFAULT);
+            mnotificationManager.createNotificationChannel(channel);
+        }
         mBuilder.setContentIntent(contentIntent);
+
         mnotificationManager.notify(requestID, mBuilder.build());
 //        if (ringerSound != -100) {
 //            backToNormalRing(mActivity, ringerSound);

@@ -36,7 +36,7 @@ public class GPS extends Service implements LocationListener
     double longitude;
  
     //The minimum distance to change updates in metters 
-    private static final long MIN_DISTANCE_CHANGE_FOR_UPDATES = 10; //10 metters
+    private static final long MIN_DISTANCE_CHANGE_FOR_UPDATES = 3000; //3000 metters
  
     //The minimum time beetwen updates in milliseconds 
     private static final long MIN_TIME_BW_UPDATES = 1000 * 60 * 1; // 1 minute

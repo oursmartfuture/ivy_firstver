@@ -21,6 +21,7 @@
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
 
     <!--<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>-->
     <!-- Keeps the processor from sleeping when a message is received. -->
@@ -339,6 +340,17 @@
             android:screenOrientation="portrait"
             android:singleUser="true"
             android:theme="@style/Theme.Transparent"></activity>
+
+        <provider
+            android:name="com.globalclasses.GenericFileProvider"
+            android:authorities="${applicationId}.globalClasses.GenericFileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+        </provider>
     </application>
 
 </manifest>

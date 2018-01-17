@@ -43,6 +43,8 @@ import static android.Manifest.permission.READ_EXTERNAL_STORAGE;
 import static android.Manifest.permission.RECORD_AUDIO;
 import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 
+import android.support.v4.content.FileProvider;
+
 /**
  * Class Name: ChooseImageActivity.Class
  * Class description: This class contains methods and classes for selecting the image for uploading it to the server.
@@ -253,7 +255,13 @@ public class ChooseImageActivity extends Activity implements OnClickListener {
 
     private Uri setImageUri() {
         File file = new File(Environment.getExternalStorageDirectory() + "/DCIM/", "Ivy" + new Date().getTime() + ".png");
-        Uri imgUri = Uri.fromFile(file);
+        Uri imgUri;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N){
+            imgUri = FileProvider.getUriForFile(getApplicationContext(), getApplicationContext().getPackageName() + ".globalClasses.GenericFileProvider", file);
+        }else{
+            imgUri = Uri.fromFile(file);
+        }
+
         this.filePath = file.getAbsolutePath();
         return imgUri;
     }

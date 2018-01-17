@@ -64,8 +64,8 @@ public class Add_user_contact extends Activity implements CallBackListenar, View
         preferences = getSharedPreferences(Constant.pref_main, Activity.MODE_PRIVATE);
         params = new Bundle();
         context = Add_user_contact.this;
-        appUserbtn = (Button) findViewById(R.id.appUserbtn);
-        appUserbtn.setOnClickListener(this);
+//        appUserbtn = (Button) findViewById(R.id.appUserbtn);
+//        appUserbtn.setOnClickListener(this);
         appPhonebook = (Button) findViewById(R.id.appPhonebook);
         appPhonebook.setOnClickListener(this);
         backBtn = (ImageButton) findViewById(R.id.backBtn);
@@ -74,14 +74,14 @@ public class Add_user_contact extends Activity implements CallBackListenar, View
         swipeRefresh = (SwipeRefreshLayout) findViewById(R.id.swipeRefresh);
         swipeRefreshNoRecord = (SwipeRefreshLayout) findViewById(R.id.swipeRefreshNoRecord);
         Add_user_contact.this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_HARDWARE_ACCELERATED, WindowManager.LayoutParams.FLAG_HARDWARE_ACCELERATED);
-        addcontactstxt = (TextView) findViewById(R.id.addcontactstxt);
-        addcontactstxt1 = (TextView) findViewById(R.id.addcontactstxt1);
+//        addcontactstxt = (TextView) findViewById(R.id.addcontactstxt);
+//        addcontactstxt1 = (TextView) findViewById(R.id.addcontactstxt1);
         headerText.setText(getIntent().getStringExtra("header_name"));
         GlobalMethod.AcaslonProSemiBoldTextView(Add_user_contact.this, headerText);
         GlobalMethod.AcaslonProSemiBoldButton(Add_user_contact.this, appPhonebook);
-        GlobalMethod.AcaslonProSemiBoldButton(Add_user_contact.this, appUserbtn);
-        GlobalMethod.AcaslonProSemiBoldTextView(Add_user_contact.this, addcontactstxt);
-        GlobalMethod.AcaslonProSemiBoldTextView(Add_user_contact.this, addcontactstxt1);
+//        GlobalMethod.AcaslonProSemiBoldButton(Add_user_contact.this, appUserbtn);
+//        GlobalMethod.AcaslonProSemiBoldTextView(Add_user_contact.this, addcontactstxt);
+//        GlobalMethod.AcaslonProSemiBoldTextView(Add_user_contact.this, addcontactstxt1);
         norecord_linear = (LinearLayout) findViewById(R.id.norecord_linear);
         phone_list = (ListView) findViewById(R.id.total_follow_list);
 //       phone_list;
@@ -224,11 +224,11 @@ public class Add_user_contact extends Activity implements CallBackListenar, View
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.appUserbtn:
-                Intent addAppUser = new Intent(Add_user_contact.this, Add_App_User.class);
-                addAppUser.putExtra("header_name", "Add App Users");
-                startActivityForResult(addAppUser, 1001);
-                break;
+//            case R.id.appUserbtn:
+//                Intent addAppUser = new Intent(Add_user_contact.this, Add_App_User.class);
+//                addAppUser.putExtra("header_name", "Add App Users");
+//                startActivityForResult(addAppUser, 1001);
+//                break;
             case R.id.appPhonebook:
 //                Intent appPhonebook=new Intent(Add_user_contact.this,Add_Phone_User.class);
                 Intent appPhonebook = new Intent(Add_user_contact.this, Add_Phone_User.class);

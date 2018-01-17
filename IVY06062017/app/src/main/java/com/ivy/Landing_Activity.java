@@ -1,5 +1,7 @@
 package com.ivy;
 
+import android.*;
+import android.Manifest;
 import android.app.Activity;
 import android.app.Dialog;
 import android.app.Notification;
@@ -73,6 +75,7 @@ import static android.Manifest.permission.ACCESS_FINE_LOCATION;
 import static android.Manifest.permission.CALL_PHONE;
 import static android.Manifest.permission.RECORD_AUDIO;
 import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
+import static android.Manifest.permission.ACCESS_NOTIFICATION_POLICY;
 
 /**
  * Class Name: Landing_Activity.Class
@@ -449,6 +452,15 @@ public class Landing_Activity extends Activity implements View.OnClickListener, 
             finish();
         }
 
+//      TODO: Once DND is finalised, try enabling this code to check at the start of app
+//      if (Build.VERSION.SDK_INT > Build.VERSION_CODES.M){
+//            if (ActivityCompat.checkSelfPermission(mActivity, Manifest.permission.ACCESS_NOTIFICATION_POLICY) == PackageManager.PERMISSION_GRANTED) {
+////                requestPermissions(new String[]{ACCESS_NOTIFICATION_POLICY}, REQUEST_ACCESS);
+//                Toast.makeText(context, "Please enable Do Not Disturb for IVY", Toast.LENGTH_LONG).show();
+//
+//            }
+//        }
+
         final BluetoothManager bluetoothManager = (BluetoothManager) getSystemService(Context.BLUETOOTH_SERVICE);
         mBluetoothAdapter = bluetoothManager.getAdapter();
         mainPreferences = getSharedPreferences(Constant.pref_main, Activity.MODE_PRIVATE);
@@ -603,6 +615,7 @@ public class Landing_Activity extends Activity implements View.OnClickListener, 
                 }
             }
         }
+
     }
 
     private void exit() {

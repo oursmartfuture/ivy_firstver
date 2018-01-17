@@ -22,7 +22,7 @@ public class GpsLocationReceiver extends BroadcastReceiver {
             LocationManager locationManager = (LocationManager) context.getSystemService(Context.LOCATION_SERVICE);
             boolean isEnabled = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
             if (!isEnabled) {
-                Toast.makeText(context, context.getString(R.string.closesLocation), Toast.LENGTH_LONG).show();
+//                Toast.makeText(context, context.getString(R.string.closesLocation), Toast.LENGTH_LONG).show();
             }
         }
     }
